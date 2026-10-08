@@ -13,7 +13,7 @@ Useful tools for developer and people working in IT. <a href="https://it-tools.t
 # 校园工具箱 Campus Toolbox（本项目是基于 IT-Tools 的 fork）
 
 > 上游项目：[CorentinTh/it-tools](https://github.com/CorentinTh/it-tools)（GPL-3.0）
-> 本 fork：[`campus-toolbox`](https://github.com/1024580972-hub/campus-toolbox)，同样以 **GPL-3.0** 开源。
+> 本 fork：[`campus-toolbox`](https://github.com/louise20081030/campus-toolbox)，同样以 **GPL-3.0** 开源。
 
 IT-Tools 是给开发者用的工具集合，我们把它改造成**给大学生每天用的工具箱**：保留原项目全部能力，新增一个「校园学习」分类，加入三个原项目没有的工具，并把界面默认切到中文、补齐离线可用能力。
 

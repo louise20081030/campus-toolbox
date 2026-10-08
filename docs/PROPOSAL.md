@@ -1,7 +1,7 @@
 # 校园工具箱 Campus Toolbox · 项目策划书
 
 > 基于 [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools)（GPL-3.0）二次开发的校园版在线工具集合
-> 本 fork 仓库：`campus-toolbox`（同为 GPL-3.0）
+> 本 fork 仓库：https://github.com/louise20081030/campus-toolbox （同为 GPL-3.0）
 
 ---
 
