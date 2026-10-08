@@ -29,9 +29,18 @@ function toggleCategoryCollapse({ name }: { name: string }) {
   collapsedCategories.value[name] = !collapsedCategories.value[name];
 }
 
+const { t, te } = useI18n();
+
+/** 分类名在 i18n 里配了就用译文，没配就原样显示（兼容自定义分类） */
+function categoryLabel(name: string): string {
+  const key = `tools.categories.${name.toLowerCase()}`;
+  return te(key) ? t(key) : name;
+}
+
 const menuOptions = computed(() =>
   toolsByCategory.value.map(({ name, components }) => ({
     name,
+    label: categoryLabel(name),
     isCollapsed: collapsedCategories.value[name],
     tools: components.map(tool => ({
       label: makeLabel(tool),
@@ -45,14 +54,14 @@ const themeVars = useThemeVars();
 </script>
 
 <template>
-  <div v-for="{ name, tools, isCollapsed } of menuOptions" :key="name">
+  <div v-for="{ name, label, tools, isCollapsed } of menuOptions" :key="name">
     <div ml-6px mt-12px flex cursor-pointer items-center op-60 @click="toggleCategoryCollapse({ name })">
       <span :class="{ 'rotate-0': isCollapsed, 'rotate-90': !isCollapsed }" text-16px lh-1 op-50 transition-transform>
         <icon-mdi-chevron-right />
       </span>
 
       <span ml-8px text-13px>
-        {{ name }}
+        {{ label }}
       </span>
     </div>
 

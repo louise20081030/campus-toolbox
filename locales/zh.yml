@@ -27,6 +27,7 @@ home:
     darkMode: '深色模式'
     lightMode: '浅色模式'
     mode: '颜色模式'
+    offline: '当前离线，工具仍可正常使用（已安装为离线应用）'
 about:
   content: >
     # 关于 IT-Tools
@@ -60,6 +61,7 @@ search:
 tools:
   categories:
     favorite-tools: '我的收藏'
+    campus: '校园学习'
     crypto: '加密'
     converter: '转换器'
     web: Web
@@ -388,3 +390,15 @@ tools:
   text-to-binary:
     title: 文本到 ASCII 二进制
     description: 将文本转换为其 ASCII 二进制表示形式，反之亦然。
+
+  gpa-calculator:
+    title: 绩点 / 加权平均分换算
+    description: 粘贴教务系统成绩，一次算出 GPA、学分加权平均分，横向对比 5 种常见绩点算法，并给出提分性价比榜。
+
+  schedule-conflict:
+    title: 课表冲突检测
+    description: 按「星期 × 节次 × 周次」检测选课冲突，自动算出每周空闲时段与课表概览。
+
+  reference-formatter:
+    title: 参考文献格式转换
+    description: 填一次字段，同时输出 GB/T 7714-2015、APA 7、MLA 9、IEEE 与 BibTeX，也支持反向解析与批量转换。

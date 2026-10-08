@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { IconBrandGithub, IconBrandX, IconInfoCircle, IconMoon, IconSun } from '@tabler/icons-vue';
+import { IconBrandGithub, IconBrandX, IconCloudOff, IconInfoCircle, IconMoon, IconSun } from '@tabler/icons-vue';
 import { useStyleStore } from '@/stores/style.store';
 
 const styleStore = useStyleStore();
 const { isDarkTheme } = toRefs(styleStore);
+const isOnline = useOnline();
 </script>
 
 <template>
@@ -30,6 +31,12 @@ const { isDarkTheme } = toRefs(styleStore);
       :aria-label="$t('home.nav.twitterXAccount')"
     >
       <n-icon size="25" :component="IconBrandX" />
+    </c-button>
+  </c-tooltip>
+
+  <c-tooltip v-if="!isOnline" :tooltip="$t('home.nav.offline')" position="bottom">
+    <c-button circle variant="text" :aria-label="$t('home.nav.offline')">
+      <n-icon size="25" :component="IconCloudOff" />
     </c-button>
   </c-tooltip>
 

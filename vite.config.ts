@@ -56,11 +56,24 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       strategies: 'generateSW',
+      // 校园网 / 宿舍网经常掉线：把整站资源预缓存，断网也能继续用
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true,
+        navigateFallback: 'index.html',
+        cleanupOutdatedCaches: true,
+        globPatterns: ['**/*.{js,css,html,png,svg,ico,woff,woff2,json}'],
+        // 部分工具（如 mac 地址查询、文本对比）chunk 超过 3MB，默认不会被预缓存，
+        // 这里放宽上限，保证断网时所有工具都能打开
+        maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
+      },
+      includeAssets: ['favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png'],
       manifest: {
-        name: 'IT Tools',
-        description: 'Aggregated set of useful tools for developers.',
+        name: '校园工具箱 Campus Toolbox',
+        short_name: '校园工具箱',
+        description: '面向大学生的在线工具集合：绩点换算、课表冲突检测、参考文献格式转换，离线也能用。',
         display: 'standalone',
-        lang: 'fr-FR',
+        lang: 'zh-CN',
         start_url: `${baseUrl}?utm_source=pwa&utm_medium=pwa`,
         orientation: 'any',
         theme_color: '#18a058',

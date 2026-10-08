@@ -27,6 +27,7 @@ home:
     darkMode: 'Dark mode'
     lightMode: 'Light mode'
     mode: 'Toggle dark/light mode'
+    offline: 'Offline — tools still work, they are cached locally'
 about:
   content: >
     # About IT-Tools
@@ -60,6 +61,7 @@ search:
 tools:
   categories:
     favorite-tools: 'Your favorite tools'
+    campus: Campus
     crypto: Crypto
     converter: Converter
     web: Web
@@ -392,3 +394,15 @@ tools:
   text-to-binary:
     title: Text to ASCII binary
     description: Convert text to its ASCII binary representation and vice-versa.
+
+  gpa-calculator:
+    title: GPA & weighted average calculator
+    description: Paste your transcript, get GPA and credit-weighted average at once, compare 5 grading scales and see which course is worth pushing.
+
+  schedule-conflict:
+    title: Timetable conflict checker
+    description: Detect course clashes by day, period and week parity, then compute your free slots for the week.
+
+  reference-formatter:
+    title: Reference formatter
+    description: Fill the fields once and get GB/T 7714-2015, APA 7, MLA 9, IEEE and BibTeX at once, with reverse parsing and batch conversion.
